@@ -1,8 +1,11 @@
-input.onButtonPressed(Button.A, function () {
-    getal += 1 + getal
+input.onGesture(Gesture.Shake, function () {
+    basic.showNumber(randint(0, 6))
+    basic.pause(2000)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
 })
-input.onButtonPressed(Button.B, function () {
-    getal += 1 - getal
-})
-let getal = 0
-getal = 0
