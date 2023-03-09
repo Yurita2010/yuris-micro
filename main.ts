@@ -1,11 +1,37 @@
-input.onGesture(Gesture.Shake, function () {
-    basic.showNumber(randint(0, 6))
-    basic.pause(2000)
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        `)
+basic.forever(function () {
+    if (input.compassHeading() >= 45) {
+        basic.showLeds(`
+            . . # . .
+            . # # # .
+            # . # . #
+            . . # . .
+            . . # . .
+            `)
+    } else if (input.compassHeading() >= 135) {
+        basic.showLeds(`
+            . . # . .
+            . # . . .
+            # # # # #
+            . # . . .
+            . . # . .
+            `)
+    } else if (input.compassHeading() < 225) {
+        basic.showLeds(`
+            . . # . .
+            . . # . .
+            # . # . #
+            . # # # .
+            . . # . .
+            `)
+    } else if (input.compassHeading() >= 315) {
+        basic.showLeds(`
+            . . # . .
+            . . . # .
+            # # # # #
+            . . . # .
+            . . # . .
+            `)
+    } else {
+    	
+    }
 })
